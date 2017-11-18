@@ -32,7 +32,7 @@ def layer_sizes(X, Y):
     return (n_x, n_y)
 
 
-def initialize_parameters(n_x, n_h, n_y):
+def initialize_parameters(n_x, n_h, n_y,verbose):
     """
     Argument:
     n_x -- size of the input layer
@@ -53,12 +53,14 @@ def initialize_parameters(n_x, n_h, n_y):
     b2 = np.zeros((n_y, 1))
     costs = []
 
-    print()
-    print("W1.shape", W1.shape)
-    print("b1.shape", b1.shape)
-    print("W2.shape", W2.shape)
-    print("b2.shape", b2.shape)
-    print()
+    if(verbose):
+
+	    print()
+	    print("W1.shape", W1.shape)
+	    print("b1.shape", b1.shape)
+	    print("W2.shape", W2.shape)
+	    print("b2.shape", b2.shape)
+	    print()
 
     assert (W1.shape == (n_h, n_x))
     assert (b1.shape == (n_h, 1))
@@ -69,7 +71,7 @@ def initialize_parameters(n_x, n_h, n_y):
                   "b1": b1,
                   "W2": W2,
                   "b2": b2,
-                  "costs": costs}
+                  }
 
     return parameters
 
@@ -176,7 +178,7 @@ def backward_propagation(parameters, cache, X, Y):
     return grads
 
 
-def update_parameters(parameters, grads, cost, learning_rate=1.2):
+def update_parameters(parameters, grads, learning_rate=1.2):
     """
     Updates parameters using the gradient descent update rule given above
 
@@ -192,7 +194,6 @@ def update_parameters(parameters, grads, cost, learning_rate=1.2):
     b1 = parameters["b1"]
     W2 = parameters["W2"]
     b2 = parameters["b2"]
-    costs = parameters["costs"]
 
     # Retrieve each gradient from the dictionary "grads"
     dW1 = grads["dW1"]
@@ -205,18 +206,16 @@ def update_parameters(parameters, grads, cost, learning_rate=1.2):
     b1 = b1 - (learning_rate * db1)
     W2 = W2 - (learning_rate * dW2)
     b2 = b2 - (learning_rate * db2)
-    costs.append(cost)
 
     parameters = {"W1": W1,
                   "b1": b1,
                   "W2": W2,
-                  "b2": b2,
-                  "costs": costs}
+                  "b2": b2,}
 
     return parameters
 
 
-def nn_model(X, Y, Xtest, Ytest, n_h, num_iterations=10000, learning_rate = 0.01, print_cost=False):
+def nn_model(X, Y, Xtest, Ytest, n_h, num_iterations=10000, learning_rate = 0.01, print_cost=False, verbose = True):
     """
     Arguments:
     X -- dataset of shape (2, number of examples)
@@ -231,11 +230,12 @@ def nn_model(X, Y, Xtest, Ytest, n_h, num_iterations=10000, learning_rate = 0.01
 
     n_x = layer_sizes(X, Y)[0]
     n_y = layer_sizes(X, Y)[1]
+    return_costs = []
 
-    print("n_x =", n_x, "n_y", n_y, "n_h", n_h)
+   
     # Initialize parameters, then retrieve W1, b1, W2, b2. Inputs: "n_x, n_h,
     # n_y". Outputs = "W1, b1, W2, b2, parameters".
-    parameters = initialize_parameters(n_x, n_h, n_y)
+    parameters = initialize_parameters(n_x, n_h, n_y, False)
     W1 = parameters["W1"]
     b1 = parameters["b1"]
     W2 = parameters["W2"]
@@ -243,7 +243,7 @@ def nn_model(X, Y, Xtest, Ytest, n_h, num_iterations=10000, learning_rate = 0.01
 
     # Loop (gradient descent)
 
-    for i in range(0, num_iterations):
+    for i in range(0, num_iterations +1):
 
         # Forward propagation. Inputs: "X, parameters". Outputs: "A2, cache".
         A2, cache = forward_propagation(X, parameters)
@@ -256,21 +256,29 @@ def nn_model(X, Y, Xtest, Ytest, n_h, num_iterations=10000, learning_rate = 0.01
 
         # Gradient descent parameter update. Inputs: "parameters, grads".
         # Outputs: "parameters".
-        parameters = update_parameters(parameters, grads, cost, learning_rate)
+        parameters = update_parameters(parameters, grads, learning_rate)
 
         # Print the cost every 1000 iterations
-        if print_cost and i % 1000 == 0:
-            print("Cost after iteration %i: %f" % (i, cost))
+        if print_cost and i % print_cost == 0 and verbose:
+            print("\t%f = Cost after iteration %i" % (cost,i))
+        if i % (num_iterations / 10) == 0:
+        	return_costs.append(cost)
+    #adding cost and printing cost for last value
 
+    
     # Predict test/train set examples
     Y_prediction_train = predict(parameters, X)
     Y_prediction_test = predict(parameters, Xtest)
 
     # Print train/test Errors
-    print("train accuracy: {} %".format(
-        100 - np.mean(np.abs(Y_prediction_train - Y)) * 100))
-    print("test accuracy: {} %".format(
-        100 - np.mean(np.abs(Y_prediction_test - Ytest)) * 100))
+    if verbose:
+        print("\ttrain accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_train - Y)) * 100))
+        print("\ttest accuracy: {} %".format(100 - np.mean(np.abs(Y_prediction_test - Ytest)) * 100))
+
+    #adding final parameters
+    parameters["sample_costs"] = return_costs
+    parameters["train score"] = (100 - np.mean(np.abs(Y_prediction_train - Y)) * 100)
+    parameters["test score"] = (100 - np.mean(np.abs(Y_prediction_test - Ytest)) * 100)
 
     return parameters
 

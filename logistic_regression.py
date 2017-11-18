@@ -1,10 +1,7 @@
-
-
-
-
+import numpy as np
 
 def sigmoid(z):
-	586+99*-"""
+	"""
 	Compute the sigmoid of z
 	
 	Arguments:

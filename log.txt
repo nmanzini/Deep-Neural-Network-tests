@@ -1,0 +1,104 @@
+
+starting testing of 6 cases
+
+LUNGEHZZA
+
+test # 0 	Num iterations =  2000 	Learning rate = 0.167 	Hidden units 3 
+
+	0.693587 = Cost after iteration 0
+	0.612217 = Cost after iteration 200
+	0.606722 = Cost after iteration 400
+	0.584080 = Cost after iteration 600
+	0.602794 = Cost after iteration 800
+	0.589616 = Cost after iteration 1000
+	0.591367 = Cost after iteration 1200
+	0.604729 = Cost after iteration 1400
+	0.563297 = Cost after iteration 1600
+	0.571542 = Cost after iteration 1800
+	0.595750 = Cost after iteration 2000
+	train accuracy: 67.19999999999999 %
+	test accuracy: 64.9616368286445 %
+
+test # 1 	Num iterations =  2000 	Learning rate = 0.055 	Hidden units 6 
+
+	0.693536 = Cost after iteration 0
+	0.655018 = Cost after iteration 200
+	0.629847 = Cost after iteration 400
+	0.558862 = Cost after iteration 600
+	0.536321 = Cost after iteration 800
+	0.526541 = Cost after iteration 1000
+	0.564322 = Cost after iteration 1200
+	0.533291 = Cost after iteration 1400
+	0.505524 = Cost after iteration 1600
+	0.575403 = Cost after iteration 1800
+	0.502478 = Cost after iteration 2000
+	train accuracy: 68.8 %
+	test accuracy: 66.75191815856778 %
+
+test # 2 	Num iterations =  2000 	Learning rate = 0.323 	Hidden units 8 
+
+	0.693936 = Cost after iteration 0
+	0.613697 = Cost after iteration 200
+	0.611634 = Cost after iteration 400
+	0.607087 = Cost after iteration 600
+	0.604712 = Cost after iteration 800
+	0.602258 = Cost after iteration 1000
+	0.597359 = Cost after iteration 1200
+	0.620366 = Cost after iteration 1400
+	0.587148 = Cost after iteration 1600
+	0.581015 = Cost after iteration 1800
+	0.579170 = Cost after iteration 2000
+	train accuracy: 68.2 %
+	test accuracy: 64.9616368286445 %
+
+test # 3 	Num iterations =  2000 	Learning rate = 0.373 	Hidden units 7 
+
+	0.693554 = Cost after iteration 0
+	0.617413 = Cost after iteration 200
+	0.609975 = Cost after iteration 400
+	0.605527 = Cost after iteration 600
+	0.605458 = Cost after iteration 800
+	0.595660 = Cost after iteration 1000
+	0.599884 = Cost after iteration 1200
+	0.587775 = Cost after iteration 1400
+	0.554413 = Cost after iteration 1600
+	0.591564 = Cost after iteration 1800
+	0.579898 = Cost after iteration 2000
+	train accuracy: 68.0 %
+	test accuracy: 64.9616368286445 %
+
+test # 4 	Num iterations =  2000 	Learning rate = 0.114 	Hidden units 10 
+
+	0.693720 = Cost after iteration 0
+	0.624692 = Cost after iteration 200
+	0.597073 = Cost after iteration 400
+	0.594828 = Cost after iteration 600
+	0.606088 = Cost after iteration 800
+	0.553471 = Cost after iteration 1000
+	0.557159 = Cost after iteration 1200
+	0.557149 = Cost after iteration 1400
+	0.538891 = Cost after iteration 1600
+	0.491556 = Cost after iteration 1800
+	0.487723 = Cost after iteration 2000
+	train accuracy: 75.8 %
+	test accuracy: 71.35549872122762 %
+
+test # 5 	Num iterations =  2000 	Learning rate = 0.364 	Hidden units 4 
+
+	0.692542 = Cost after iteration 0
+	0.621857 = Cost after iteration 200
+	0.605505 = Cost after iteration 400
+	0.607104 = Cost after iteration 600
+	0.603958 = Cost after iteration 800
+	0.594527 = Cost after iteration 1000
+	0.588001 = Cost after iteration 1200
+	0.584724 = Cost after iteration 1400
+	0.583273 = Cost after iteration 1600
+	0.589223 = Cost after iteration 1800
+	0.545339 = Cost after iteration 2000
+	train accuracy: 72.8 %
+	test accuracy: 70.076726342711 %
+6
+
+DONE fellow human 
+
