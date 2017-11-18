@@ -116,7 +116,7 @@ def single_hidden_layer_test(verbose = True):
         if (verbose):
             print()
             print ("test #",i,"\tNum iterations = ", num_iterations,"\tLearning rate =", learning_rate,"\tHidden units",hidden_layers,"\n")
-        tests[str(i)] = mono_layer.nn_model(train_set_x, train_set_y, test_set_x, test_set_y, 7, num_iterations, learning_rate, num_iterations/10,False)
+        tests[str(i)] = mono_layer.nn_model(train_set_x, train_set_y, test_set_x, test_set_y, 7, num_iterations, learning_rate, num_iterations/10,verbose)
         tests[str(i)]["hidden_layers"] = hidden_layers
         tests[str(i)]["learning_rate"] = learning_rate
         tests[str(i)]["num_iterations"] = num_iterations
@@ -139,7 +139,7 @@ def graph_it(tests):
     plt.xlabel('iterations')
     plt.title("Evolution of costs")
     plt.grid(axis='y', linestyle='-')
-    plt.savefig("figure 1.png", facecolor='w', edgecolor='k')
+    plt.savefig("./titanic out/figure 1.png", facecolor='w', edgecolor='k')
     plt.show()
 
 
@@ -155,7 +155,7 @@ def map_it(tests):
         print()
 
 
-log = open('log.txt', 'w')
+log = open('./titanic out/log.txt', 'w')
 sys.stdout = log
 
 np.random.seed(1)
