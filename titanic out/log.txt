@@ -1,0 +1,150 @@
+
+starting testing of 6 cases
+
+
+test # 0 	Num iterations =  25000 	Learning rate = 0.167 	Hidden units 3 
+
+	0.693587 = Cost after iteration 0
+	0.515533 = Cost after iteration 2500
+	0.446681 = Cost after iteration 5000
+	0.413150 = Cost after iteration 7500
+	0.408336 = Cost after iteration 10000
+	0.402090 = Cost after iteration 12500
+	0.399578 = Cost after iteration 15000
+	0.402577 = Cost after iteration 17500
+	0.393468 = Cost after iteration 20000
+	0.397658 = Cost after iteration 22500
+	0.389101 = Cost after iteration 25000
+	train accuracy: 83.2 %
+	test accuracy: 78.77237851662404 %
+
+test # 1 	Num iterations =  25000 	Learning rate = 0.055 	Hidden units 6 
+
+	0.693536 = Cost after iteration 0
+	0.545232 = Cost after iteration 2500
+	0.463577 = Cost after iteration 5000
+	0.440121 = Cost after iteration 7500
+	0.434802 = Cost after iteration 10000
+	0.428205 = Cost after iteration 12500
+	0.421935 = Cost after iteration 15000
+	0.416192 = Cost after iteration 17500
+	0.413025 = Cost after iteration 20000
+	0.410822 = Cost after iteration 22500
+	0.408102 = Cost after iteration 25000
+	train accuracy: 81.2 %
+	test accuracy: 80.81841432225065 %
+
+test # 2 	Num iterations =  25000 	Learning rate = 0.323 	Hidden units 8 
+
+	0.693936 = Cost after iteration 0
+	0.554258 = Cost after iteration 2500
+	0.514292 = Cost after iteration 5000
+	0.493924 = Cost after iteration 7500
+	0.432498 = Cost after iteration 10000
+	0.405480 = Cost after iteration 12500
+	0.391870 = Cost after iteration 15000
+	0.388427 = Cost after iteration 17500
+	0.391216 = Cost after iteration 20000
+	0.392346 = Cost after iteration 22500
+	0.374498 = Cost after iteration 25000
+	train accuracy: 85.2 %
+	test accuracy: 81.07416879795396 %
+
+test # 3 	Num iterations =  25000 	Learning rate = 0.373 	Hidden units 7 
+
+	0.693554 = Cost after iteration 0
+	0.589022 = Cost after iteration 2500
+	0.559751 = Cost after iteration 5000
+	0.547935 = Cost after iteration 7500
+	0.542901 = Cost after iteration 10000
+	0.531179 = Cost after iteration 12500
+	0.528377 = Cost after iteration 15000
+	0.534537 = Cost after iteration 17500
+	0.517922 = Cost after iteration 20000
+	0.420816 = Cost after iteration 22500
+	0.473567 = Cost after iteration 25000
+	train accuracy: 82.4 %
+	test accuracy: 79.79539641943734 %
+
+test # 4 	Num iterations =  25000 	Learning rate = 0.114 	Hidden units 10 
+
+	0.693720 = Cost after iteration 0
+	0.537961 = Cost after iteration 2500
+	0.438779 = Cost after iteration 5000
+	0.415675 = Cost after iteration 7500
+	0.402812 = Cost after iteration 10000
+	0.397751 = Cost after iteration 12500
+	0.395196 = Cost after iteration 15000
+	0.393387 = Cost after iteration 17500
+	0.391580 = Cost after iteration 20000
+	0.388301 = Cost after iteration 22500
+	0.382005 = Cost after iteration 25000
+	train accuracy: 84.6 %
+	test accuracy: 80.30690537084399 %
+
+test # 5 	Num iterations =  25000 	Learning rate = 0.364 	Hidden units 4 
+
+	0.692542 = Cost after iteration 0
+	0.578497 = Cost after iteration 2500
+	0.548855 = Cost after iteration 5000
+	0.541897 = Cost after iteration 7500
+	0.539903 = Cost after iteration 10000
+	0.532640 = Cost after iteration 12500
+	0.422286 = Cost after iteration 15000
+	0.420430 = Cost after iteration 17500
+	0.425120 = Cost after iteration 20000
+	0.420496 = Cost after iteration 22500
+	0.419368 = Cost after iteration 25000
+	train accuracy: 83.6 %
+	test accuracy: 79.53964194373401 %
+TEST 0
+final cost 	 0.389100551374
+train score 	 83.2
+test score 	 78.7723785166
+hidden_layers 	 3
+learning_rate 	 0.167
+num_iterations 	 25000
+
+TEST 1
+final cost 	 0.408102264271
+train score 	 81.2
+test score 	 80.8184143223
+hidden_layers 	 6
+learning_rate 	 0.055
+num_iterations 	 25000
+
+TEST 2
+final cost 	 0.374498237225
+train score 	 85.2
+test score 	 81.074168798
+hidden_layers 	 8
+learning_rate 	 0.323
+num_iterations 	 25000
+
+TEST 3
+final cost 	 0.473566579915
+train score 	 82.4
+test score 	 79.7953964194
+hidden_layers 	 7
+learning_rate 	 0.373
+num_iterations 	 25000
+
+TEST 4
+final cost 	 0.3820046102
+train score 	 84.6
+test score 	 80.3069053708
+hidden_layers 	 10
+learning_rate 	 0.114
+num_iterations 	 25000
+
+TEST 5
+final cost 	 0.419368103476
+train score 	 83.6
+test score 	 79.5396419437
+hidden_layers 	 4
+learning_rate 	 0.364
+num_iterations 	 25000
+
+
+DONE fellow human 
+
